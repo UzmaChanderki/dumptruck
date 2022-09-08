@@ -13,13 +13,7 @@ jobs:
       - name: Create a pull request for merging develop into master.
         uses: peter-evans/create-pull-request@v4
       - name: Slack Notification after PR is ready for review.
-        uses: rtCamp/action-slack-notify@v2
+        uses: kv109/action-ready-for-review@0.1
         env:
-          SLACK_CHANNEL: general
-          SLACK_ICON: https://github.com/rtCamp.png?size=48
-          SLACK_TITLE: 'Post Content :rocket:'
-          SLACK_MESSAGE: 'Post Title'
-          SLACK_USERNAME: chanderkiuzmasaman
-         
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          
+          SLACK_CHANNEL: your-slack-channel           
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 

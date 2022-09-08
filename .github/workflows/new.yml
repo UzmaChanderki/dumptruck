@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Create a pull request for merging develop into master.
-        run: gh pr create -H develop -B master --title 'Automated PR after release' --body ' '
+        uses: peter-evans/create-pull-request@v4
         env:
           GH_TOKEN: ${{GH_TOKEN}}
       - name: Slack Notification after PR is ready for review.

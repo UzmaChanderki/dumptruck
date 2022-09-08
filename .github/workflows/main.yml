@@ -13,7 +13,7 @@ jobs:
       - name: Slack Notification after PR is ready for review.
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_CHANNEL: 'ops'
+          SLACK_CHANNEL: 'testgithubaction'
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}         
           SLACK_MESSAGE: New Pull Request requires your approval; Here is the link ${{ github.event.pull_request.html_url }}
           SLACK_TITLE: ${{ github.event.pull_request.title }}

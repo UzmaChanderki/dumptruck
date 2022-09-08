@@ -10,16 +10,12 @@ jobs:
       - uses: actions/checkout@v3
       - name: Create a pull request for merging develop into master.
         uses: peter-evans/create-pull-request@v4
+      - name: GitHub Environment Variables Action
+        uses: FranzDiebold/github-env-vars-action@v2
       - name: Slack Notification after PR is ready for review.
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_CHANNEL: 'testgithubaction'
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}         
-          SLACK_MESSAGE: New Pull Request requires your approval; Here is the link ${{ github.event.pull_request.html_url }}
-          SLACK_TITLE: ${{ github.event.pull_request.title }}
-        with:
-           payload: >-
-   
-                  {
-                  "text": "This is the link to Pull Request ${{ github.event.pull_request.html_url }}"
-                  }
+          SLACK_CHANNEL: 'testgithubaction'         
+          SLACK_WEBHOOK:  ${{ secrets.SLACK_WEBHOOK }} 
+          SLACK_TITLE: ${{ CI_PR_TITLE }} 
+          SLACK_MESSAGE: ${{ CI_PR_DESCRIPTION }}

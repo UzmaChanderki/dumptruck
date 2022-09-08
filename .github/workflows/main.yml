@@ -11,11 +11,13 @@ jobs:
       - name: Create a pull request for merging develop into master.
         uses: peter-evans/create-pull-request@v4
       - name: GitHub Environment Variables Action
-        uses: FranzDiebold/github-env-vars-action@v2
+       
+        run: |
+          echo "CI_PR_TITLE=$CI_PR_TITLE"
+          echo "CI_PR_DESCRIPTION=$CI_PR_DESCRIPTION"
       - name: Slack Notification after PR is ready for review.
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: 'testgithubaction'         
+          SLACK_MESSAGE: New Pull Request requires your approval.
           SLACK_WEBHOOK:  ${{ secrets.SLACK_WEBHOOK }} 
-          SLACK_TITLE: ${{ CI_PR_TITLE }} 
-          SLACK_MESSAGE: ${{ CI_PR_DESCRIPTION }}

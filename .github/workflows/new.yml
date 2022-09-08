@@ -13,7 +13,7 @@ jobs:
       - name: Create a pull request for merging develop into master.
         uses: peter-evans/create-pull-request@v4
         env:
-          GH_TOKEN: ${{GH_TOKEN}}
+          GH_TOKEN: ${{ GH_TOKEN }}
       - name: Slack Notification after PR is ready for review.
         uses: rtCamp/action-slack-notify@v2
         env:

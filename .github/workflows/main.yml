@@ -17,4 +17,4 @@ jobs:
         env:
           SLACK_CHANNEL: 'cloud'
           SLACk_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}         
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+         

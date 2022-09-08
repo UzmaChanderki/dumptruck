@@ -15,6 +15,6 @@ jobs:
       - name: Slack Notification after PR is ready for review.
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_CHANNEL: 'cloud'
+          SLACK_CHANNEL: cloud
           SLACk_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}         
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

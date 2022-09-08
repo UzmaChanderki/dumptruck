@@ -15,5 +15,5 @@ jobs:
       - name: Slack Notification after PR is ready for review.
         uses: kv109/action-ready-for-review@0.1
         env:
-          SLACK_CHANNEL: your-slack-channel           
+          SLACK_CHANNEL: general           
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 

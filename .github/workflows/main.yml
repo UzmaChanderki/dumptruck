@@ -17,3 +17,9 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}         
           SLACK_MESSAGE: New Pull Request requires your approval; Here is the link ${{ github.event.pull_request.html_url }}
           SLACK_TITLE: ${{ github.event.pull_request.title }}
+        with:
+           payload: >-
+   
+                  {
+                  "text": "This is the link to Pull Request ${{ github.event.pull_request.html_url }}"
+                  }

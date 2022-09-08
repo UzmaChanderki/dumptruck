@@ -13,14 +13,10 @@ jobs:
       - name: Create a pull request for merging develop into master.
         uses: peter-evans/create-pull-request@v4
       - name: Slack Notification after PR is ready for review.
-        uses: jun3453/slack-pr-open-notification-action@v1.3.0
+        uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: 'cloud'
           SLACk_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}         
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }} 
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          PULL_REQUEST_NUMBER : ${{ github.event.pull_request.number }}
-          PULL_REQUEST_TITLE : ${{ github.event.pull_request.title }}
-          PULL_REQUEST_AUTHOR_NAME : ${{ github.event.pull_request.user.login }}
-
-       
+        with:
+          args: 'New PR created and waits for your approval ' 

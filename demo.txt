@@ -1,1 +1,1 @@
-xclip -selection cli
+https://github.com/UzmaChanderki/dumptruck/pull/4

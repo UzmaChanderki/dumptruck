@@ -1,0 +1,19 @@
+name: Spelling checks in release notes
+on:
+  pull_request:
+    types: [opened, synchronize]
+  push:
+    paths: [release-notes/*]
+
+jobs:
+  spelling_check:
+    runs-on: ubuntu-20.04
+    name: Checks spelling of release-notes
+    steps:
+      - uses: actions/checkout@v2
+      - uses: codespell-project/actions-codespell@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          ignore_words_file: .codespellignore
+          path: dumptruck/release-notes/*.yml
+          level: info

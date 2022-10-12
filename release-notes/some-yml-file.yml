@@ -1,0 +1,5 @@
+audienc:
+  - Operator
+whatIsIt: Correct import order for service instances and bindings
+descriptin: |
+  When importing a batch of mesh objects containing projects and service instances/bindings the latter will now be created last to ensure the project exists.

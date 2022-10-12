@@ -17,5 +17,3 @@ jobs:
           SLACK_MESSAGE: New Pull Request requires your approval.
           SLACK_WEBHOOK:  ${{ secrets.SLACK_WEBHOOK }} 
           SLACK_TITLE: New PR Created at master branch 
-abccbassssa
-dfhfhjdhfjhdkjh

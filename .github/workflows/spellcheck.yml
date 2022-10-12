@@ -4,8 +4,6 @@ on:
     types: [opened, synchronize]
   push:
     paths: [release-notes/*]
-    branches:
-      - "develop1"
 jobs:
   spelling_check:
     runs-on: ubuntu-20.04

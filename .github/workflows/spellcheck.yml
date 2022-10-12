@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: codespell-project/actions-codespell@master
         with:
-          path: dumptruck/release-notes/*.yml
+          path: /dumptruck/release-notes/some-yml-file.yml

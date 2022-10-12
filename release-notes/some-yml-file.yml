@@ -1,5 +1,5 @@
 audienc:
-  - Operator
+  - Operato
 whatIsIt: Correct import ord for service instances nd bindings
 descriptin: |
-  When importing a batch of mesh objects containing projects and service instances/bindings the latter will now be created last to ensure the project exists.
+  When importin a batch of mesh objects containing projects and service instances/bindings the latter will now be created last to ensure the project exists.

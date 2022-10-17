@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-20.04
     name: Checks spelling of release-notes
     steps:
-      - uses: actions/checkout@v2
       - uses: codespell-project/actions-codespell@master
         with:
           path: release-notes/*yml

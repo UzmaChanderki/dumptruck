@@ -12,5 +12,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: codespell-project/actions-codespell@master
         with:
+          args: --write-changes 2 --interactive --dictionary .github/dictionary.txt
           path: release-notes/*yml
-          args: [-w 2 -i -D DICTIONARY] 
+         

@@ -13,4 +13,4 @@ jobs:
       - uses: codespell-project/actions-codespell@master
         with:
           path: release-notes/*yml
-          w: Mescloud->meshcloud
+          args: -w 2 -i -D DICTIONARY 

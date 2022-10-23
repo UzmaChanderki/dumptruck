@@ -3,3 +3,6 @@ audienc:
 whatIsIt: Correct import ord for service instances nd bindings
 descritin: |
   When importin a batch of mesh objects containing projects and service instances/bindings the latter will now be created last to ensure the project exists meshstack , meshdev, meshcloud
+
+Meshcloud
+meshCloud

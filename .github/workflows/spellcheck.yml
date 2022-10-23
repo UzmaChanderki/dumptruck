@@ -13,4 +13,4 @@ jobs:
       - uses: codespell-project/actions-codespell@master
         with:
           path: release-notes/*yml
-          args: -w 2 -i -D DICTIONARY 
+          args: [-w 2 -i -D DICTIONARY] 

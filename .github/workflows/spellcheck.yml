@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: codespell-project/actions-codespell@master
         with:
-          args: --write-changes --interactive --dictionary .github/dictionary.txt
+          args: --regex "[^meshcloud$]"
           path: release-notes/*yml
          
